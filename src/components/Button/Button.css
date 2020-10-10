@@ -1,0 +1,23 @@
+.Button{
+    display: inline-block;
+}
+
+.Success{
+    border: 2px solid green;
+    background-color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 3px 5px;
+    color: green;
+    text-transform: uppercase;
+    margin-right: 5px ;
+}
+
+.Danger {
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-weight: bold;
+    color: red;
+    text-transform: uppercase;
+}
