@@ -1,10 +1,11 @@
 .Button{
     display: inline-block;
+    outline: none;
+    border: none;
 }
 
 .Success{
-    border: 2px solid green;
-    background-color: white;
+    background-color: rgb(211, 255, 191);
     border-radius: 4px;
     font-weight: bold;
     padding: 3px 5px;
@@ -14,10 +15,11 @@
 }
 
 .Danger {
-    border: 2px solid red;
+    
     border-radius: 4px;
     padding: 3px 5px;
     font-weight: bold;
-    color: red;
+    color: #555;
+    background-color: #aaa;
     text-transform: uppercase;
 }

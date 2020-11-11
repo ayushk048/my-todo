@@ -10,15 +10,13 @@ import TodoForm from './components/TodoForm/TodoForm';
 function App() {
   const [todos, setTodos] = useState([])
 
-
   const completeTodoHandler = (e, index) => {
     e.preventDefault();
     let todosClone = [...todos];
     let todo = todosClone[index];
     todo.completed = true;
     // console.log(todosClone);
-    setTodos(todosClone)
-
+    setTodos(todosClone);
   }
 
   const removeTodoHandler = (index) => {
@@ -28,19 +26,21 @@ function App() {
   }
 
   const addTodoHandler = (value) => {
+    console.log(value);
     const todo = {
       text: value,
       completed: false
     }
-    const addedTodos = [...todos, todo]
+    const addedTodos = [todo, ...todos];
+
     setTodos(addedTodos);
   }
 
   return (
     <div className="App">
       <h1>TODO LIST</h1>
-      <div className="Todo-List">
 
+      <div className="Todo-List">
         {todos.length === 0 ?
           <h1 style={{ color: 'black' }}>Start Day with TODO</h1>
           : todos.map((todo, index) => (
@@ -53,10 +53,10 @@ function App() {
               removeClicked={() => removeTodoHandler(index)} />
           )
           )}
-        <TodoForm
-          placeholder='Add Task'
-          addTodo={addTodoHandler} />
       </div>
+      <TodoForm
+        placeholder='Add Task'
+        addTodo={addTodoHandler} />
     </div>
   );
 }
